@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = "your-dockerhub-username/myapp"
+        IMAGE = "yaswanth1999/myapp"
         TAG = "${BUILD_NUMBER}"
     }
 
@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/your-repo.git'
+                git 'https://github.com/yaswanth-1999/End-to-End-Helm-Release-CI-CD-Testing-.git'
             }
         }
 
