@@ -8,15 +8,9 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/yaswanth-1999/End-to-End-Helm-Release-CI-CD-Testing-.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                sh 'docker build -t $IMAGE:$TAG .'
+                sh 'cd app && docker build -t $IMAGE:$TAG .'
             }
         }
 
@@ -45,3 +39,4 @@ pipeline {
         }
     }
 }
+
